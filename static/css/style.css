@@ -202,16 +202,26 @@ progress::-moz-progress-value {
 
 
 .container {
-    position: relative;
     margin: 0 auto;
-
     width: 1050px;
-    height: 1550px;
+    min-height: 100vh; /* 至少占满整个视口高度 */
     background-color: white;
-
 }
 
 .side {
+    float: left; /* 使用浮动布局代替绝对定位 */
+    width: 360px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.main {
+    margin-left: 380px; /* 为侧边栏留出空间 */
+    min-height: 100%; /* 保证高度适应内容 */
+    padding: 20px;
+}
+
+/* .side {
     position: absolute;
     width: 360px;
     height: 100%;
@@ -227,7 +237,7 @@ progress::-moz-progress-value {
     min-height: 100%;
     padding: 20px;
 
-}
+} */
 
 .info-header:hover {
     background-color: #d4dee4;
